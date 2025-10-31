@@ -10,48 +10,117 @@ class Home extends StatelessWidget {
         title: Text('Module 10'),
         centerTitle: true,
       ),
-      body: Center(
-        child: Column(
-          children: [
-            SizedBox(height: 10,),
-            Stack(
-              children: [
-              Container(
-                alignment: Alignment.topCenter,
-                height: 350,
+      body: Column(
+        children: [
+          SizedBox(height: 10,),
+          Stack(
+            children: [
+            Container(
+              alignment: Alignment.topCenter,
+              height: 440,
+              width: 300,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(12),
+                color: Colors.white,
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black,
+                    blurRadius: 20,
+                    offset: Offset(10, 10)
+                  )
+                ]
+              ),
+              child: Container(
+                height: 200,
                 width: 300,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  color: Colors.grey
-                ),
-                child: Positioned(
-                  child: Container(
-                    height: 200,
-                    width: 300,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(12),
-                      image: DecorationImage(
-                          image: NetworkImage('https://cdn.ostad.app/course/cover/2024-12-19T15-48-52.487Z-Full-Stack-Web-Development-with-Python,-Django-&-React.jpg'),fit: BoxFit.cover
-                      )
-                    ),
-                  ),
+                  image: DecorationImage(
+                      image: NetworkImage('https://cdn.ostad.app/course/cover/2024-12-19T15-48-52.487Z-Full-Stack-Web-Development-with-Python,-Django-&-React.jpg'),fit: BoxFit.cover
+                  )
                 ),
               ),
-                Column(
+            ),
+              Positioned(
+                top: 210,
+                // bottom: 140,
+                child: Column(
                   children: [
                     Row(
                       children: [
-                        Text('Batch 19',style: TextStyle(color: Colors.white,fontSize: 12),),
-                        Text('👥 20 Reamining Seat',style: TextStyle(color: Colors.white,fontSize: 12),),
-                        Text('🕰️ ')
+                        SizedBox(width: 8,),
+                        Container(
+                          height: 25,
+                          width: 55,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: Colors.grey,
+                          ),
+                          child: Row(
+                            children: [
+                              SizedBox(width: 2,),
+                              Text(' ব্যাচ১৩ ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                          height: 25,
+                          width: 115,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: Colors.grey,
+                          ),
+                          child: Row(
+                            children: [
+                              SizedBox(width: 2,),
+                              Icon(Icons.people,size: 20,color: Colors.white,),
+                              SizedBox(width: 2,),
+                              Text(' ১০ সিট বাকি ',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
+                            ],
+                          ),
+                        ),
+                        SizedBox(width: 10,),
+                        Container(
+                          height: 25,
+                          width: 94,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(4),
+                            color: Colors.grey,
+                          ),
+                          child: Row(
+                            children: [
+                              SizedBox(width: 2,),
+                              Icon(Icons.watch_later_outlined,color: Colors.white,size: 18,),
+                              Text(' ৭দিন বাকি',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),)
+                            ],
+                          ),
+                        )
                       ],
-                    )
+                    ),
+                    Text('Full Stack Web \nDevelopment with \nJavaScript (MERN)',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 30),),
+                    SizedBox(height: 10,),
+                    Container(
+                      height: 30,
+                      width: 250,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(7),
+                        color: Colors.grey,
+                      ),
+                      child: Row(
+                        children: [
+                          SizedBox(width: 60,),
+                          Text(' বিস্তারিত দেখুন',style: TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+                          Icon(Icons.arrow_right_alt_sharp,color: Colors.white,)
+                        ],
+                      ),
+                    ),
                   ],
-                )
-              ],
-            )
-          ],
-        ),
+                ),
+              )
+            ],
+          )
+        ],
       ),
     );
   }
